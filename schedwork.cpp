@@ -48,6 +48,7 @@ bool schedule(
     return found;
 }
 
+
 void schedule_helper(size_t curr_day, bool& found, vector<int>& shifts, const AvailabilityMatrix& avail, const size_t d, DailySchedule& sched){
     if(found)
         return;
