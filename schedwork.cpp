@@ -38,9 +38,11 @@ bool schedule(
     sched.clear();
     // Create Possible Shifts
     vector<int> shifts;
-    for(size_t i = 0; i < avail.size(); i ++){
+    for(size_t i = 0; i < avail[0].size(); i ++){
         shifts.push_back(maxShifts);
-        sched.push_back(std::vector<Worker_T>());
+    }
+    for(size_t i = 0; i < avail.size(); i ++){
+        sched.push_back(vector<Worker_T>());
     }
 
     bool found = false;
